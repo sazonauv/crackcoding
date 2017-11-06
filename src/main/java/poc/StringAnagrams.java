@@ -9,7 +9,8 @@ import java.util.Scanner;
  */
 public class StringAnagrams {
 
-    //TEST: aabbccccddee accdeffgghh
+    //Input: aabbccccddee accdeffgghh
+    //Output: 13
     public static int numberNeeded(String first, String second) {
         // check if they are anagrams
         if (first.equals(second)) {
