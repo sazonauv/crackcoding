@@ -11,16 +11,17 @@ public class StockTrading {
 //    Output: 5
 
     public static int maxProfit(int[] prices) {
-        int maxSell = 0;
-        for (int i=0; i<prices.length-1; i++) {
-            for (int j=i+1; j<prices.length; j++) {
-                int sell = prices[j] - prices[i];
-                if (maxSell < sell) {
-                    maxSell = sell;
-                }
+        int maxProfit = 0;
+        int minPrice = Integer.MAX_VALUE;
+        for (int i=0; i<prices.length; i++) {
+            if (minPrice > prices[i]) {
+                minPrice = prices[i];
+            }
+            if (maxProfit < prices[i] - minPrice) {
+                maxProfit = prices[i] - minPrice;
             }
         }
-        return maxSell;
+        return maxProfit;
     }
 
     public static void main(String[] args) {
