@@ -5,7 +5,27 @@ package poc;
  */
 public class Palindrome {
 
-    public boolean isPalindrome(int x) {
+
+    public int largestPalindrome(int n) {
+        int maxMult = 1;
+        for (int i=0; i<n; i++) {
+            maxMult *= 10;
+        }
+        maxMult--;
+        int maxPal = 0;
+        for (int i=maxMult; i>0; i--) {
+            for (int j=maxMult; j>0; j--) {
+                int pal = i*j;
+                if (isPalindrome(pal) && maxPal < pal) {
+                    maxPal = pal;
+                }
+            }
+        }
+        return maxPal % 1337;
+    }
+
+
+    public boolean isPalindrome(long x) {
         if (x < 0) {
             return false;
         }

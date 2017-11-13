@@ -6,6 +6,19 @@ import java.util.List;
 
 public class CoinChange {
 
+    public static long makeChange(int[] coins, int money) {
+        long[] DP = new long[money + 1];
+        // n == 0 case.
+        DP[0] = 1;
+        for(int coin : coins) {
+            for(int j = coin; j < DP.length; j++) {
+                DP[j] += DP[j - coin];
+            }
+        }
+        return DP[money];
+    }
+
+
     class CoinTree {
 
         class CoinNode {
