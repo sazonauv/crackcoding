@@ -1,6 +1,6 @@
 package poc;
 
-public class Hamming {
+public class HammingDistance {
 
     public int totalHammingDistance(int[] nums) {
         int maxBinLen = 32;
