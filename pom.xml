@@ -20,5 +20,18 @@
         </plugins>
     </build>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.owlapi</groupId>
+            <artifactId>owlapi-distribution</artifactId>
+            <version>4.2.8</version>
+        </dependency>
+    </dependencies>
+
 
 </project>

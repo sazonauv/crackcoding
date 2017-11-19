@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Created by slava on 12/11/17.
  */
-public class TopKQueries {
+public class TopQueries {
 
     class Query {
         String string;
@@ -94,11 +94,6 @@ public class TopKQueries {
         }
     }*/
 
-
-    /**
-     * add: logarithmic (for a randomly ordered input)
-     * poll: logarithmic
-     */
     /*class TreePriorityQueue {
 
         class PriorityNode {
