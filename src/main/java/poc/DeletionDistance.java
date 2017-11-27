@@ -1,11 +1,8 @@
 package poc;
 
-import java.util.Scanner;
+public class DeletionDistance {
 
-public class LevensteinDistance {
-
-
-    public static int levenstein(String s1, String s2) {
+    public static int deletion(String s1, String s2) {
         if (s1.equals(s2)) {
             return 0;
         }
@@ -26,7 +23,7 @@ public class LevensteinDistance {
         }
         for (int i=1; i<chars1.length+1; i++) {
             for (int j=1; j<chars2.length+1; j++) {
-                int cost = (chars1[i-1] == chars2[j-1]) ? 0 : 1;
+                int cost = (chars1[i-1] == chars2[j-1]) ? 0 : 2;
                 D[i][j] = min(D[i-1][j]+1, D[i][j-1]+1, D[i-1][j-1]+cost);
             }
         }
@@ -42,14 +39,5 @@ public class LevensteinDistance {
         }
         return min;
     }
-
-
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        String s1 = scan.next();
-        String s2 = scan.next();
-        System.out.println(levenstein(s1, s2));
-    }
-
 
 }
