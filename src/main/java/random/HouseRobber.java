@@ -45,8 +45,8 @@ public class HouseRobber {
         for (int i=0; i<nums.length; i++) {
             nums[i] = (int) (Math.random() * 10);
         }
-        Out.p("Houses: " + Arrays.toString(nums));
-        Out.p(rob(nums));
+        System.out.println("Houses: " + Arrays.toString(nums));
+        System.out.println(rob(nums));
     }
 
 }
